@@ -1,0 +1,10 @@
+schema: http
+port: 8888
+tcp_health_check: true
+health_check_interval: 3
+max_allowed: 100
+location:
+  - pattern: /
+    proxy_pass:
+    - "http://110.242.68.3"
+    balance_mode: consistant_hash
